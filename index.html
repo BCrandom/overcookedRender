@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overcooked To Do | Firestore</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="shortcut icon" href="../source/favicon.png" type="image/x-icon"> -->
+</head>
+<body>
+
+    <nav>
+        <h1 id="nav-title">Overcooked To Do!</h1><br>
+        <p id="nav-subtitle">Anotaciones y cocina</p>
+    </nav>
+
+    <!-- PRIMERA COLECCION -->
+
+    <!-- El usuario ingresa su tarea -->
+        <div id="obtenerTareas" class="container">
+            <form method="post" id="ingresarTareas">
+                <fieldset>
+                    <legend>Notas</legend>
+                    <table>
+                        <tr>
+                            <th><label for="tarea-titulo">Titulo</label></th>
+                            <th><label for="tarea-descripcion">Descripcion</label></th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="tarea-titulo" placeholder="Titulo"></td>
+                            <td><textarea id="tarea-descripcion" rows="10" placeholder="Descripcion" class="textarea"></textarea></td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <div>
+                    <button id="guardar-tarea" class="btn">Guardar</button>
+                </div>
+
+            </form>
+        </div>
+    
+        <!-- El usuario ve su tarea -->
+        <div id="listaTareas" class="container"></div>
+
+        <!-- SEGUNDA COLECCION -->
+    
+        <!-- El usuario ingresa su receta -->
+        <div id="obtenerRecetas" class="container">
+            <form method="post" id="ingresar-recetas">
+                <fieldset>
+                    <legend>Recetas</legend>
+                    <table>
+                        <tr>
+                            <th><label for="guardar-nombreReceta">Receta</label></th>
+                            <th><label for="guardar-tiempoPreparacion">Tiempo de Preparacion</label></th>
+                            <th><label for="guardar-cantidadPorciones">Cantidad de Porciones</label></th>
+                            <th><label for="guardar-Ingredientes">Ingredientes y cantidades</label></th>
+                            <th><label for="">Instrucciones</label></th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="guardar-nombreReceta" placeholder="Nombre de la receta"></td>
+                            <td><input type="text" id="guardar-tiempoPreparacion" placeholder="00:00 min"></td>
+                            <td><input type="number" id="guardar-cantidadPorciones" placeholder="0"></td>
+                            <td><textarea name="guardar-Ingredientes" id="guardar-Ingredientes" placeholder="Ingredientes" class="textarea"></textarea></td>
+                            <td><textarea name="guardar-IntruccionesReceta" id="guardar-IntruccionesReceta" placeholder="Instrucciones" class="textarea"></textarea></td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <div>
+                    <button id="guardar-receta" class="btn">Guardar</button>
+                </div>
+                
+            </form>
+        </div>
+    
+        <!-- El usuario ve su receta -->
+        <div id="listaRecetas" class="container"></div>
+
+        <!-- TERCERA COLECCION -->
+
+        <!-- El ususario ingresa su evento -->
+        <div id="obtenerEventos" class="container">
+            <form action="" method="post" id="ingresar-eventos">
+                <fieldset>
+                    <legend>Eventos</legend>
+                    <table>
+                        <tr>
+                            <th><label for="evento-nombreEvento">Nombre del Evento</label></th>
+                            <th><label for="evento-fecha">Fecha del Evento</label></th>
+                            <th><label for="evento-receta">Receta</label></th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="evento-nombreEvento" placeholder="Nombre del evento"></td>
+                            <td><input type="date" id="evento-fecha" placeholder="0000/00/00"></td>
+                            <td><input type="text" id="evento-receta" placeholder="Receta para el evento"></td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <div>
+                    <button id="guardar-evento" class="btn">Guardar</button>
+                </div>
+                
+            </form>
+        </div>
+
+        <!-- El susuario ve su evento -->
+        <div id="listaEventos" class="container"></div>
+
+    <script type="module" src="./index.js"></script>
+
+</body>
+</html>
